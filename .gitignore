@@ -1,3 +1,4 @@
+
 # Python
 __pycache__/
 *.py[cod]
@@ -11,15 +12,19 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data processed and large files
-# Keep directory placeholders
+# Raw dataset (DO NOT UPLOAD TO GITHUB)
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed data and large files
 data/processed/*.parquet
 data/processed/*.csv
 !data/processed/.gitkeep
 
-# Models (keep metadata and directory structure)
+# Models (exclude large model files, retain metadata)
 models/*.pkl
 models/*.json
+!models/model_metadata.json
 !models/.gitkeep
 
 # Reports

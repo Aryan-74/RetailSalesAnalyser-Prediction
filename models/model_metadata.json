@@ -1,0 +1,154 @@
+{
+  "training_timestamp": "2026-11-12T20:46:27.178693",
+  "train_start_date": "2016-01-01",
+  "val_date_range": [
+    "2017-07-16",
+    "2017-07-31"
+  ],
+  "test_date_range": [
+    "2017-08-01",
+    "2017-08-15"
+  ],
+  "features": [
+    "year",
+    "month",
+    "day",
+    "dayofweek",
+    "weekofyear",
+    "is_weekend",
+    "quarter",
+    "onpromotion",
+    "dcoilwtico",
+    "is_holiday",
+    "sales_lag_1",
+    "sales_lag_7",
+    "sales_lag_14",
+    "sales_lag_30",
+    "sales_roll_mean_7",
+    "sales_roll_mean_14",
+    "sales_roll_mean_30",
+    "sales_roll_std_7",
+    "family",
+    "type",
+    "city",
+    "state",
+    "cluster",
+    "holiday_type",
+    "holiday_locale"
+  ],
+  "best_model": "XGBoost",
+  "val_metrics": [
+    {
+      "Model": "XGBoost",
+      "Split": "Validation",
+      "MAE": 57.3224,
+      "RMSE": 207.6026,
+      "RMSLE": 0.3826,
+      "WAPE": 0.1197,
+      "R2": 0.975
+    },
+    {
+      "Model": "Random Forest",
+      "Split": "Validation",
+      "MAE": 56.8963,
+      "RMSE": 210.0424,
+      "RMSLE": 0.3865,
+      "WAPE": 0.1188,
+      "R2": 0.9744
+    },
+    {
+      "Model": "Seasonal Naive",
+      "Split": "Validation",
+      "MAE": 69.0481,
+      "RMSE": 262.7485,
+      "RMSLE": 0.5169,
+      "WAPE": 0.1442,
+      "R2": 0.96
+    }
+  ],
+  "test_metrics": [
+    {
+      "Model": "XGBoost",
+      "Split": "Test",
+      "MAE": 65.5349,
+      "RMSE": 229.6957,
+      "RMSLE": 0.3842,
+      "WAPE": 0.1409,
+      "R2": 0.9659
+    },
+    {
+      "Model": "Random Forest",
+      "Split": "Test",
+      "MAE": 65.0389,
+      "RMSE": 222.0207,
+      "RMSLE": 0.3915,
+      "WAPE": 0.1398,
+      "R2": 0.9682
+    },
+    {
+      "Model": "Seasonal Naive",
+      "Split": "Test",
+      "MAE": 101.2522,
+      "RMSE": 353.8006,
+      "RMSLE": 0.569,
+      "WAPE": 0.2177,
+      "R2": 0.9192
+    }
+  ],
+  "feature_importances": {
+    "Random Forest": {
+      "year": 0.00037843369163003874,
+      "month": 0.0005031048098459675,
+      "day": 0.005412243084323745,
+      "dayofweek": 0.001671099641721754,
+      "weekofyear": 0.0036521667541215687,
+      "is_weekend": 0.0008475441703986062,
+      "quarter": 0.0002577596972306356,
+      "onpromotion": 0.0011549293644109743,
+      "dcoilwtico": 0.0012495254054206292,
+      "is_holiday": 0.0001987866586406118,
+      "sales_lag_1": 0.002212210946571903,
+      "sales_lag_7": 0.0035321382741925087,
+      "sales_lag_14": 0.010472330529595524,
+      "sales_lag_30": 0.00044243290750906305,
+      "sales_roll_mean_7": 0.9405261365830822,
+      "sales_roll_mean_14": 0.02345160848729288,
+      "sales_roll_mean_30": 0.0017765757634472283,
+      "sales_roll_std_7": 0.0006544447706412571,
+      "family": 0.00031646204395421266,
+      "type": 0.00018156953924127424,
+      "city": 0.0001790346958544005,
+      "state": 0.00014563784984836383,
+      "cluster": 0.00022948040070249512,
+      "holiday_type": 0.00028207289065950336,
+      "holiday_locale": 0.00027227103966281896
+    },
+    "XGBoost": {
+      "year": 0.0023746469523757696,
+      "month": 0.00102977582719177,
+      "day": 0.004651202354580164,
+      "dayofweek": 0.001561403856612742,
+      "weekofyear": 0.0028039871249347925,
+      "is_weekend": 0.003745377529412508,
+      "quarter": 0.0018039364367723465,
+      "onpromotion": 0.0015334496274590492,
+      "dcoilwtico": 0.0008629497606307268,
+      "is_holiday": 0.0004913071752525866,
+      "sales_lag_1": 0.00976500753313303,
+      "sales_lag_7": 0.010915977880358696,
+      "sales_lag_14": 0.01248655840754509,
+      "sales_lag_30": 0.00032359006581828,
+      "sales_roll_mean_7": 0.6029142141342163,
+      "sales_roll_mean_14": 0.33429962396621704,
+      "sales_roll_mean_30": 0.005858829244971275,
+      "sales_roll_std_7": 0.000321652099955827,
+      "family": 0.00038344194763340056,
+      "type": 0.00029435960459522903,
+      "city": 0.0002125929604517296,
+      "state": 0.00019538140622898936,
+      "cluster": 0.00025767902843654156,
+      "holiday_type": 0.0004412605194374919,
+      "holiday_locale": 0.00047177670057862997
+    }
+  }
+}
