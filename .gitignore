@@ -15,7 +15,7 @@ env/
 # Raw dataset (DO NOT UPLOAD TO GITHUB)
 data/raw/*
 !data/raw/.gitkeep
-
+store-sales-time-series-forecasting/
 # Processed data and large files
 data/processed/*.parquet
 data/processed/*.csv
